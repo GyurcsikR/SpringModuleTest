@@ -39,13 +39,22 @@ public class SpaceShipController {
         return "redirect:/spaceships";
     }
 
-    @GetMapping(value = "/spaceships")
+    @GetMapping(value = {"/spaceships"})
     public String getSpaceShips(Model model){
         List<SpaceShip> spaceShips = spaceShipService.getAllSpaceShip();
         model.addAttribute("spaceShips", spaceShips);
 
         return "spaceships";
     }
+
+    @GetMapping(value = "/spaceships/active")
+    public String getActiveShips(Model model){
+        List<SpaceShip> activeShips = spaceShipRepo.findSpaceShipByActiveIsTrue();
+        model.addAttribute("spaceShips", activeShips);
+
+        return "spaceships";
+    }
+
     @GetMapping(value = "/crew/{name}")
     public String findCrewByShips(@PathVariable String name, Model model){
         List<SpaceShip> spaceships = spaceShipRepo.findSpaceShipByName(name);
