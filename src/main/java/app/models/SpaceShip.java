@@ -34,6 +34,12 @@ public class SpaceShip {
 
     public SpaceShip() {}
 
+    public SpaceShip(SpaceShipClass spaceShipClass, String name){
+        this.spaceShipClass = spaceShipClass;
+        this.name = name;
+
+    }
+
     public SpaceShip(SpaceShipClass spaceShipClass, String name, boolean isActive) {
         this.spaceShipClass = spaceShipClass;
         this.name = name;

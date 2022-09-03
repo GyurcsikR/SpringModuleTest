@@ -10,8 +10,8 @@
 <body>
 
 <div id="container">
-
-    <form data-th-object="${newShip}">
+    <h1>New ship registration</h1>
+    <form class="form" data-th-action="@{/spaceship}" method="post" data-th-object="${newShip}">
 
         <select data-th-field="*{spaceShipClass}">
             <option data-th-each="shipClass : ${shipClasses}"
@@ -19,6 +19,10 @@
                     data-th-text="${shipClass}">
             </option>
         </select>
+        <input type="text" data-th-field="*{name}" placeholder="name">
+
+
+        <input class="send_button" type="submit" value="Küldés">
 
     </form>
 

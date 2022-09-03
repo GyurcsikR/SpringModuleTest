@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crew</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Crews</th>
+    </tr>
+    <tr data-th-each="spaceship: ${spaceship}">
+        <td data-th-text="${spaceship.name}"></td>
+        <td data-th-text="${spaceship.crews}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

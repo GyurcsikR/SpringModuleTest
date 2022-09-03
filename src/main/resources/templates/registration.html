@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+</head>
+<body>
+
+<div class="form">
+    <h1>User registration</h1>
+    <form class="form" data-th-action="@{/register}" method="post" data-th-object="${user}">
+        <input type="text" data-th-field="*{username}" placeholder="felhasználónév">
+        <input type="password" data-th-field="*{password}" placeholder="jelszó">
+        <input class="send_button" type="submit" value="Küldés">
+    </form>
+</div>
+
+</body>
+</html>
