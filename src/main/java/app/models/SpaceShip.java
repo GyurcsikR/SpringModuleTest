@@ -115,4 +115,14 @@ public class SpaceShip {
         this.crews = crews;
     }
 
+    @Override
+    public String toString() {
+        return "SpaceShip{" +
+                "registrationCode=" + registrationCode +
+                ", spaceShipClass=" + spaceShipClass +
+                ", name='" + name + '\'' +
+                ", isActive=" + isActive +
+                ", crews=" + crews +
+                '}';
+    }
 }
